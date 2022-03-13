@@ -1,14 +1,34 @@
 package com.fidecard.application.model;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-@MappedSuperclass
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@Entity
+@Table(name = "Endereco")
 public class Endereco implements Serializable {
 	
 	private static final long serialVersionUID = 4581901753438097803L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", nullable = false)
+	private Long id;
 	
 	@Size(min = 2, max = 60)
 	@Column(name = "logradouro", nullable = false)
@@ -48,93 +68,4 @@ public class Endereco implements Serializable {
 	
 	@Column(name = "telefone")
 	private String telefone;
-	
-	public String getLogradouro() {
-		return logradouro;
-	}
-	
-	public void setLogradouro(String logadouro) {
-		this.logradouro = logadouro;
-	}
-	
-	public String getNumero() {
-		return numero;
-	}
-	
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
-	
-	public String getComplemento() {
-		return complemento;
-	}
-	
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-	
-	public String getBairro() {
-		return bairro;
-	}
-	
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-	
-	public Integer getCodigoMunicipio() {
-		return codigoMunicipio;
-	}
-	
-	public void setCodigoMunicipio(Integer codigoMunicipio) {
-		this.codigoMunicipio = codigoMunicipio;
-	}
-	
-	public String getNomeMunicipio() {
-		return nomeMunicipio;
-	}
-	
-	public void setNomeMunicipio(String nomeMunicipio) {
-		this.nomeMunicipio = nomeMunicipio;
-	}
-	
-	public String getUf() {
-		return uf;
-	}
-	
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
-	
-	public String getCep() {
-		return cep;
-	}
-	
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-	
-	public String getCodigoPais() {
-		return codigoPais;
-	}
-	
-	public void setCodigoPais(String codigoPais) {
-		this.codigoPais = codigoPais;
-	}
-	
-	public String getPais() {
-		return pais;
-	}
-	
-	public void setPais(String pais) {
-		this.pais = pais;
-	}
-	
-	public String getTelefone() {
-		return telefone;
-	}
-	
-	public void setTelefone(String fone) {
-		this.telefone = fone;
-	}
-	
 }
