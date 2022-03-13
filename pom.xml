@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.fidecard</groupId>
+	<artifactId>fide.card</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>Fide Card</name>
+	<packaging>pom</packaging>
+	<description>Projeto Agrupador do Fide Card</description>
+
+	<modules>
+		<module>fide-card-application</module>
+		<module>fide-card-common</module>
+	</modules>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<!--> JAVA <!-->
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<!--> JPA <!-->
+		<jdbc.minimumPoolSize>10</jdbc.minimumPoolSize>
+		<jdbc.maximumPoolSize>10</jdbc.maximumPoolSize>
+		<jpa.show.sql>true</jpa.show.sql>
+		<jpa.format.sql>false</jpa.format.sql>
+		<jpa.generate_statistics>false</jpa.generate_statistics>
+		<jpa.use_sql_comments>true</jpa.use_sql_comments>
+		<jpa.cache.use_structured_entries>true</jpa.cache.use_structured_entries>
+		<jpa.use.query.cache>true</jpa.use.query.cache>
+		<jpa.use.second.level.cache>false</jpa.use.second.level.cache>
+		<jpa.cache.use.minimal.puts>true</jpa.cache.use.minimal.puts>
+		<jpa.hbm2ddl.auto>none</jpa.hbm2ddl.auto>
+		<!--> LOGGING <!-->
+		<logging.level.root>INFO</logging.level.root>
+		<logging.level.app>INFO</logging.level.app>
+
+		<assembler.dir>${project.build.directory}/generated-resources/appassembler/jsw</assembler.dir>
+		<jsw.initialMemorySize>128M</jsw.initialMemorySize>
+		<jsw.maxMemorySize>1024M</jsw.maxMemorySize>
+		<jsw.main.class>com.fidecard.application.FideCardApplication</jsw.main.class>
+		<jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
+		<javafaker.version>1.0.2</javafaker.version>
+		<lombok.version>1.18.22</lombok.version>
+		<jsonwebtoken.version>0.9.1</jsonwebtoken.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.6.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
+</project>
