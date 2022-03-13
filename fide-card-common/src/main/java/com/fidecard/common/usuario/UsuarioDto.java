@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(description = "Usuário")
-public class UsuarioDTO {
+public class UsuarioDto {
 	private String hashCpf;
 	private String hashSenha;
 }

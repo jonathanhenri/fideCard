@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="Criando coisas">
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/enuns/StatusCartao.java" afterDir="false" />
+    <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="Models">
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cliente/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/CadastroGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/ClienteGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/Filas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/PropriedadesJmsCadastro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CompraCartao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/endereco/EnderecoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/usuario/UsuarioDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/utils/RetornoSubmitDireto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Auditoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Auditoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CartaoFidelidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CartaoFidelidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Endereco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/LayoutCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/LayoutCartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Notificacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Notificacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/RegraCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/RegraCartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/usuario/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cliente/ClienteDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -80,6 +82,13 @@
       <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\java\com\fidecard\application\model\support" />
       <recent name="E:\workspaceFideCard\fideCard\fide-card-common" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fidecard.common.cliente" />
+      <recent name="com.fidecard.application.jms" />
+      <recent name="com.fidecard.common.utils" />
+      <recent name="com.fidecard.application.controllers.cadastro" />
+      <recent name="com.fidecard.application.enuns" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -115,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647198516768</updated>
       <workItem from="1647198518015" duration="994000" />
-      <workItem from="1647200080299" duration="4058000" />
+      <workItem from="1647200080299" duration="7578000" />
     </task>
     <task id="LOCAL-00001" summary="Criando coisas">
       <created>1647201974092</created>
@@ -124,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647201974092</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Models">
+      <created>1647204188425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647204188425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +159,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criando coisas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando coisas" />
+    <MESSAGE value="Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Models" />
   </component>
 </project>
