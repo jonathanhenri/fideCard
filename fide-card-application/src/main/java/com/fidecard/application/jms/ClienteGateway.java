@@ -2,6 +2,7 @@ package com.fidecard.application.jms;
 
 import static com.fidecard.application.jms.Filas.CLIENTE_ATUALIZAR;
 import static com.fidecard.application.jms.Filas.CLIENTE_CADASTRO;
+import static com.fidecard.application.jms.Filas.CLIENTE_DELETAR;
 
 import com.fidecard.application.utils.exceptions.ServiceException;
 import com.fidecard.common.cliente.ClienteDto;
@@ -17,12 +18,9 @@ public class ClienteGateway extends CadastroGateway {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ClienteGateway.class);
 	
-	private final JmsTemplate jmsTemplate;
-	
 	@Autowired
-	public ClienteGateway(JmsTemplate jmsTemplate, JmsTemplate jmsTemplate1) {
+	public ClienteGateway(JmsTemplate jmsTemplate) {
 		super(jmsTemplate);
-		this.jmsTemplate = jmsTemplate1;
 	}
 	
 	public void cadastrarCliente(ClienteDto cliente) {
@@ -36,8 +34,17 @@ public class ClienteGateway extends CadastroGateway {
 	
 	public void atualizarCliente(ClienteDto cliente) {
 		try {
-			LOGGER.info("Enfileirando Cadastro Cliente {}", cliente.getNome());
+			LOGGER.info("Enfileirando Atualizar Cliente {}", cliente.getNome());
 			enfileirar(CLIENTE_ATUALIZAR, toJson(cliente));
+		} catch (IOException e) {
+			throw new ServiceException("Falha ao importar DF-e", e);
+		}
+	}
+	
+	public void deletarCliente(ClienteDto cliente) {
+		try {
+			LOGGER.info("Enfileirando Deletar Cliente {}", cliente.getNome());
+			enfileirar(CLIENTE_DELETAR, toJson(cliente));
 		} catch (IOException e) {
 			throw new ServiceException("Falha ao importar DF-e", e);
 		}

@@ -23,6 +23,7 @@ public class ClienteController {
 	private static final String BASE_URL = "/cliente";
 	public static final String URL_CADASTRAR = BASE_URL + "/iapi/cadastrar";
 	public static final String URL_ATUALIZAR = BASE_URL + "/iapi/atualizar";
+	public static final String URL_DELETAR = BASE_URL + "/iapi/deletar";
 	
 	@Autowired
 	public ClienteController(ClienteGateway clienteGateway) {
@@ -62,6 +63,23 @@ public class ClienteController {
 		
 		clienteGateway.atualizarCliente(cliente);
 		return RetornoSubmitDireto.builder().mensagem("Atualização de cliente enviado para processamento.")
+				.httpStatus(HttpStatus.ACCEPTED.value()).build();
+	}
+	
+	/**
+	 * Deletar cliente
+	 *
+	 * @param cliente deletar
+	 */
+	@PostMapping(value = URL_DELETAR, consumes = {APPLICATION_JSON_VALUE}, produces = APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "Deleta Vinculo com o Cliente", notes = "Deleta Vinculo com o cliente-empresa") //TODO FAZER SEGURANÇA
+	public RetornoSubmitDireto deletarCliente(@RequestBody ClienteDto cliente) {
+		if (cliente == null ) {
+			throw new ServiceException("Dados do cliente Vazio");
+		}
+		
+		clienteGateway.deletarCliente(cliente);
+		return RetornoSubmitDireto.builder().mensagem("Deletar vinculo de cliente-empresa enviado para processamento.")
 				.httpStatus(HttpStatus.ACCEPTED.value()).build();
 	}
 }
