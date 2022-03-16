@@ -4,24 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="Models e api">
-      <change afterPath="$PROJECT_DIR$/fide-card-application/fide-card.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/ConfigPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/EhCacheConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/GeneralConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/JmsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/RepositoryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/swagger/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/resources/ehcache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card.log" afterDir="false" />
+    <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="Arrumando dependencias">
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/enuns/StatusUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/enuns/TipoRegraCartao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cliente/ClienteListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cliente/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cliente/ClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cliente/ClienteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card.log.2022-03-14.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_11_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_29.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/FideCardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/FideCardApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cliente/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cliente/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/ClienteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/ClienteGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/Filas.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/Filas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/test/java/com/fidecard/application/FideCardApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/CadastroGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/CadastroGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/ClienteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cliente/ClienteGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Auditoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Auditoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CartaoFidelidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CartaoFidelidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CompraCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/PontoCartao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/LayoutCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/LayoutCartao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Notificacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Notificacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/RegraCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/regraCartao/RegraCartao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/support/AbstractBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/support/AbstractBaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/support/repository/CustomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/repository/CustomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/support/service/AbstractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/AbstractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/support/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cliente/ClienteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cliente/ClienteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/endereco/EnderecoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/endereco/EnderecoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card.log" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide.card.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fide.card.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,11 +150,11 @@
       <recent name="E:\workspaceFideCard\fideCard\fide-card-common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fidecard.application.jms.cliente" />
+      <recent name="com.fidecard.application.services.cliente" />
+      <recent name="com.fidecard.application.services.usuario" />
+      <recent name="com.fidecard.application.enuns" />
       <recent name="com.fidecard.application.config" />
-      <recent name="com.fidecard.application.config.swagger" />
-      <recent name="com.fidecard.common.cliente" />
-      <recent name="com.fidecard.application.jms" />
-      <recent name="com.fidecard.common.utils" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -141,7 +195,9 @@
       <workItem from="1647198518015" duration="994000" />
       <workItem from="1647200080299" duration="7647000" />
       <workItem from="1647304034503" duration="2820000" />
-      <workItem from="1647307109827" duration="1680000" />
+      <workItem from="1647307109827" duration="1717000" />
+      <workItem from="1647341845224" duration="34000" />
+      <workItem from="1647390554344" duration="4758000" />
     </task>
     <task id="LOCAL-00001" summary="Criando coisas">
       <created>1647201974092</created>
@@ -164,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647207753620</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Arrumando dependencias">
+      <created>1647309023350</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647309023350</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +249,23 @@
     <MESSAGE value="Criando coisas" />
     <MESSAGE value="Models" />
     <MESSAGE value="Models e api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Models e api" />
+    <MESSAGE value="Arrumando dependencias" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando dependencias" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cliente/ClienteListener.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cliente/ClienteListener.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

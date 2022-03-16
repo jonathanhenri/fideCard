@@ -2,7 +2,7 @@ package com.fidecard.application.controllers.cliente;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import com.fidecard.application.jms.ClienteGateway;
+import com.fidecard.application.jms.cliente.ClienteGateway;
 import com.fidecard.application.utils.exceptions.ServiceException;
 import com.fidecard.common.cliente.ClienteDto;
 import com.fidecard.common.utils.RetornoSubmitDireto;

@@ -1,5 +1,6 @@
 package com.fidecard.application.model;
 
+import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -19,11 +20,14 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "layout_cartao")
-public class LayoutCartao {
+public class LayoutCartao extends AbstractBaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", nullable = false)
 	private Long id;
+	
+	@Column(name = "codigo_cor")
+	private String codigoCor;
 	
 }

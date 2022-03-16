@@ -1,4 +1,4 @@
-package com.fidecard.application.model.support.repository;
+package com.fidecard.application.services.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;

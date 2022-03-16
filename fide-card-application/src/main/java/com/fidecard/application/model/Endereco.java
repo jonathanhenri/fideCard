@@ -1,5 +1,6 @@
 package com.fidecard.application.model;
 
+import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -12,7 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
 
 @Setter
 @Getter
@@ -21,7 +21,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "Endereco")
-public class Endereco implements Serializable {
+public class Endereco extends AbstractBaseEntity {
 	
 	private static final long serialVersionUID = 4581901753438097803L;
 	

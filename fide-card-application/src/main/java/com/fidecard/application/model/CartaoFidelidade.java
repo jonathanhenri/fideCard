@@ -1,6 +1,7 @@
 package com.fidecard.application.model;
 
 import com.fidecard.application.enuns.StatusCartao;
+import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -26,7 +27,7 @@ import javax.validation.constraints.NotNull;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "cartao_fidelidade")
-public class CartaoFidelidade {
+public class CartaoFidelidade extends AbstractBaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

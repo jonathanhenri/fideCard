@@ -1,4 +1,4 @@
-package com.fidecard.application.model.support.service;
+package com.fidecard.application.services;
 
 import com.fidecard.application.utils.exceptions.CreateException;
 import com.fidecard.application.utils.exceptions.DeleteException;

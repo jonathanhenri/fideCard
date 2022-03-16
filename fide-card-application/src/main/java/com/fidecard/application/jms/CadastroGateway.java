@@ -29,7 +29,7 @@ public class CadastroGateway {
 		
 		jmsTemplate.send(nomeFila, session -> {
 			final TextMessage mensagem = session.createTextMessage();
-			mensagem.setObjectProperty(PropriedadesJmsCadastro.JSON_MODEL.name(), jsonModel);
+			mensagem.setStringProperty(PropriedadesJmsCadastro.JSON_MODEL.name(), jsonModel);
 
 			return mensagem;
 		});

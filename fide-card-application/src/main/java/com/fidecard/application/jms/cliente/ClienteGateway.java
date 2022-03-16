@@ -1,9 +1,10 @@
-package com.fidecard.application.jms;
+package com.fidecard.application.jms.cliente;
 
 import static com.fidecard.application.jms.Filas.CLIENTE_ATUALIZAR;
 import static com.fidecard.application.jms.Filas.CLIENTE_CADASTRO;
 import static com.fidecard.application.jms.Filas.CLIENTE_DELETAR;
 
+import com.fidecard.application.jms.CadastroGateway;
 import com.fidecard.application.utils.exceptions.ServiceException;
 import com.fidecard.common.cliente.ClienteDto;
 import org.slf4j.Logger;

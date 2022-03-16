@@ -1,5 +1,6 @@
 package com.fidecard.application.model;
 
+import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -21,7 +22,6 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
 import java.util.Date;
 
 @Setter
@@ -31,7 +31,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "cliente")
-public class Cliente implements Serializable {
+public class Cliente extends AbstractBaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

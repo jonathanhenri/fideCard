@@ -1,4 +1,4 @@
-package com.fidecard.application.model.support.service;
+package com.fidecard.application.services;
 
 public interface Service<E> {
 	
@@ -11,5 +11,7 @@ public interface Service<E> {
 	void delete(Long id);
 	
 	E findById(Long id);
+	
+	boolean validarCreate(E bean);
 	
 }

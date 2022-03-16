@@ -1,5 +1,6 @@
 package com.fidecard.application.model;
 
+import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -28,8 +29,8 @@ import java.util.Date;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "compra_cartao")
-public class CompraCartao {
+@Table(name = "pronto_cartao")
+public class PontoCartao extends AbstractBaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,13 +44,13 @@ public class CompraCartao {
 	@Column(name = "identificador_unico", nullable = false)
 	private String identificadorUnico;
 	
-	@Column(name = "data_compra", nullable = false)
+	@Column(name = "data_pontuacao", nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date dataCompra;
+	private Date dataPontuacao;
 	
 	@NotNull
 	@OneToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "cartao_fidelidade_id", foreignKey = @ForeignKey(name = "fk_compra_cartao_fide"))
+	@JoinColumn(name = "cartao_fidelidade_id", foreignKey = @ForeignKey(name = "fk_ponto_cartao"))
 	private CartaoFidelidade cartaoFidelidade;
 	
 	
