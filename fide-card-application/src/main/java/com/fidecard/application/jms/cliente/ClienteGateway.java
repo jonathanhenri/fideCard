@@ -24,30 +24,30 @@ public class ClienteGateway extends CadastroGateway {
 		super(jmsTemplate);
 	}
 	
-	public void cadastrarCliente(ClienteDto cliente) {
+	public void cadastrar(ClienteDto cliente) {
 		try {
 			LOGGER.info("Enfileirando Cadastro Cliente {}", cliente.getNome());
 			enfileirar(CLIENTE_CADASTRO, toJson(cliente));
 		} catch (IOException e) {
-			throw new ServiceException("Falha ao importar DF-e", e);
+			throw new ServiceException("Falha ao importar Cliente", e);
 		}
 	}
 	
-	public void atualizarCliente(ClienteDto cliente) {
+	public void atualizar(ClienteDto cliente) {
 		try {
 			LOGGER.info("Enfileirando Atualizar Cliente {}", cliente.getNome());
 			enfileirar(CLIENTE_ATUALIZAR, toJson(cliente));
 		} catch (IOException e) {
-			throw new ServiceException("Falha ao importar DF-e", e);
+			throw new ServiceException("Falha ao importar Cliente", e);
 		}
 	}
 	
-	public void deletarCliente(ClienteDto cliente) {
+	public void deletar(ClienteDto cliente) {
 		try {
 			LOGGER.info("Enfileirando Deletar Cliente {}", cliente.getNome());
 			enfileirar(CLIENTE_DELETAR, toJson(cliente));
 		} catch (IOException e) {
-			throw new ServiceException("Falha ao importar DF-e", e);
+			throw new ServiceException("Falha ao importar Cliente", e);
 		}
 	}
 

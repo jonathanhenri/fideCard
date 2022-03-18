@@ -1,7 +1,7 @@
 package com.fidecard.application.model;
 
 import com.fidecard.application.model.support.AbstractBaseEntity;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,6 @@ import javax.validation.constraints.Size;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -68,4 +67,23 @@ public class Endereco extends AbstractBaseEntity {
 	
 	@Column(name = "telefone")
 	private String telefone;
+	
+	@Builder
+	public Endereco(Long id, String logradouro, String numero, String complemento, String bairro,
+					Integer codigoMunicipio, String nomeMunicipio, String uf, String cep, String codigoPais,
+					String pais, String telefone) {
+		this.id = id;
+		this.logradouro = logradouro;
+		this.numero = numero;
+		this.complemento = complemento;
+		this.bairro = bairro;
+		this.codigoMunicipio = codigoMunicipio;
+		this.nomeMunicipio = nomeMunicipio;
+		this.uf = uf;
+		this.cep = cep;
+		this.codigoPais = codigoPais;
+		this.pais = pais;
+		this.telefone = telefone;
+	}
+	
 }

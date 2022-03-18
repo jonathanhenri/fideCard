@@ -1,5 +1,6 @@
 package com.fidecard.application.model.regraCartao;
 
+import com.fidecard.application.enuns.TipoRegraCartao;
 import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -12,6 +13,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Positive;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -26,5 +29,16 @@ public class RegraCartao extends AbstractBaseEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", nullable = false)
 	private Long id;
+	
+	@Column(name = "valor")
+	@Positive
+	private Double valor;
+	
+	@Column(name = "data")
+	private LocalDateTime data;
+	
+	
+	@Column(name = "tipo_regra_cartao", nullable = false)
+	private TipoRegraCartao tipoRegraCartao;
 	
 }

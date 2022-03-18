@@ -3,7 +3,7 @@ package com.fidecard.application.model;
 import com.fidecard.application.enuns.StatusUsuario;
 import com.fidecard.application.enuns.TipoUsuario;
 import com.fidecard.application.model.support.AbstractBaseEntity;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +18,6 @@ import javax.validation.constraints.NotNull;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -43,4 +42,15 @@ public class Usuario extends AbstractBaseEntity {
 	
 	@Column(name = "status_usuario")
 	private StatusUsuario statusUsuario;
+	
+	@Builder
+	public Usuario(Long id, String hashLogin, String hashSenha, TipoUsuario tipoUsuario,
+				   StatusUsuario statusUsuario) {
+		this.id = id;
+		this.hashLogin = hashLogin;
+		this.hashSenha = hashSenha;
+		this.tipoUsuario = tipoUsuario;
+		this.statusUsuario = statusUsuario;
+	}
+	
 }

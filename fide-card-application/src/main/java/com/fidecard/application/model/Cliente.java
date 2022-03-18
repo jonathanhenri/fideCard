@@ -1,7 +1,7 @@
 package com.fidecard.application.model;
 
 import com.fidecard.application.model.support.AbstractBaseEntity;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,7 +26,6 @@ import java.util.Date;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -61,5 +60,17 @@ public class Cliente extends AbstractBaseEntity {
 	@OneToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "endereco_id", foreignKey = @ForeignKey(name = "fk_cliente_endereco"))
 	private Endereco endereco;
+	
+	@Builder
+	public Cliente(Long id, String hashCpf, String hashSenha, String nome, Date dataNascimento, Date dataUltimoAcesso,
+				   Endereco endereco) {
+		this.id = id;
+		this.hashCpf = hashCpf;
+		this.hashSenha = hashSenha;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.dataUltimoAcesso = dataUltimoAcesso;
+		this.endereco = endereco;
+	}
 	
 }

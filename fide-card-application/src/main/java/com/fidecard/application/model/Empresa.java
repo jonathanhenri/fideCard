@@ -1,7 +1,7 @@
 package com.fidecard.application.model;
 
 import com.fidecard.application.model.support.AbstractBaseEntity;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,13 +17,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -55,5 +53,16 @@ public class Empresa extends AbstractBaseEntity {
 	@Column(name = "cnpj")
 	@Size(min = 14, max = 20)
 	private String cnpj;
+	
+	@Builder
+	public Empresa(Long id, String razaoSocial, Endereco endereco, String responsavelNome, String responsavelTelefone,
+				   String cnpj) {
+		this.id = id;
+		this.razaoSocial = razaoSocial;
+		this.endereco = endereco;
+		this.responsavelNome = responsavelNome;
+		this.responsavelTelefone = responsavelTelefone;
+		this.cnpj = cnpj;
+	}
 	
 }

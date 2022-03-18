@@ -1,4 +1,4 @@
-package com.fidecard.common.usuario;
+package com.fidecard.common.cartaoFidelidade;
 
 import com.fidecard.common.Dto;
 import io.swagger.annotations.ApiModel;
@@ -13,9 +13,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(description = "Usuário")
-public class UsuarioDto implements Dto {
+@ApiModel(description = "Regra do Cartão")
+public class RegraCartaoDto implements Dto {
 	
-	private String hashLogin;
-	private String hashSenha;
+	private Integer tipoRegraCartao;
+	private Double valor;
+	private String localDateTime;
 }

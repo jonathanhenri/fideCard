@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = "Documento Fiscal")
+@Api(tags = "Cliente")
 @RestController
 public class ClienteController {
 	
@@ -43,7 +43,7 @@ public class ClienteController {
 			throw new ServiceException("Dados do cliente Vazio");
 		}
 		
-		clienteGateway.cadastrarCliente(cliente);
+		clienteGateway.cadastrar(cliente);
 		return RetornoSubmitDireto.builder().mensagem("Cadastro de cliente enviado para processamento.")
 				.httpStatus(HttpStatus.ACCEPTED.value()).build();
 	}
@@ -61,7 +61,7 @@ public class ClienteController {
 			throw new ServiceException("Dados do cliente Vazio");
 		}
 		
-		clienteGateway.atualizarCliente(cliente);
+		clienteGateway.atualizar(cliente);
 		return RetornoSubmitDireto.builder().mensagem("Atualização de cliente enviado para processamento.")
 				.httpStatus(HttpStatus.ACCEPTED.value()).build();
 	}
@@ -78,7 +78,7 @@ public class ClienteController {
 			throw new ServiceException("Dados do cliente Vazio");
 		}
 		
-		clienteGateway.deletarCliente(cliente);
+		clienteGateway.deletar(cliente);
 		return RetornoSubmitDireto.builder().mensagem("Deletar vinculo de cliente-empresa enviado para processamento.")
 				.httpStatus(HttpStatus.ACCEPTED.value()).build();
 	}

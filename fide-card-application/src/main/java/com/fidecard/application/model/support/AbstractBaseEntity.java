@@ -28,7 +28,7 @@ public abstract class AbstractBaseEntity implements Entityable {
 	@Version
 	private Integer version;
 	
-	@OneToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "usuario_criacao_id", foreignKey = @ForeignKey(name = "fk_usuario_criacao"))
 	private Usuario usuarioCriacao;
 	
