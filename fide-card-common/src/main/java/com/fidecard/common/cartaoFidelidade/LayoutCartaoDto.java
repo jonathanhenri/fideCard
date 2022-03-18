@@ -1,4 +1,4 @@
-package com.fidecard.common.usuario;
+package com.fidecard.common.cartaoFidelidade;
 
 import com.fidecard.common.AbstractDto;
 import io.swagger.annotations.ApiModel;
@@ -13,10 +13,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(description = "Usuário")
-public class UsuarioDto extends AbstractDto {
+@ApiModel(description = "Layout Cartão")
+public class LayoutCartaoDto extends AbstractDto {
 	
-	private String hashLogin;
-	private String hashSenha;
+	private String codigoCor;
 	
 }

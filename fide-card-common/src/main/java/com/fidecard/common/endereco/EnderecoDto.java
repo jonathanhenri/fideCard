@@ -1,6 +1,6 @@
 package com.fidecard.common.endereco;
 
-import com.fidecard.common.Dto;
+import com.fidecard.common.AbstractDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(description = "Endereço")
-public class EnderecoDto implements Dto {
+public class EnderecoDto extends AbstractDto {
 	
 	private String logradouro;
 	private String numero;

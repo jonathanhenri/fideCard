@@ -2,6 +2,7 @@ package com.fidecard.application.model;
 
 import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,6 @@ import javax.persistence.Table;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -29,5 +29,11 @@ public class LayoutCartao extends AbstractBaseEntity {
 	
 	@Column(name = "codigo_cor")
 	private String codigoCor;
+	
+	@Builder
+	public LayoutCartao(Long id, String codigoCor) {
+		this.id = id;
+		this.codigoCor = codigoCor;
+	}
 	
 }

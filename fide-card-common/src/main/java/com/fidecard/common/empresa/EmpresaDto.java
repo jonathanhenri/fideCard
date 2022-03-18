@@ -1,6 +1,6 @@
 package com.fidecard.common.empresa;
 
-import com.fidecard.common.Dto;
+import com.fidecard.common.AbstractDto;
 import com.fidecard.common.endereco.EnderecoDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -16,7 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(description = "Empresa")
-public class EmpresaDto implements Dto {
+public class EmpresaDto extends AbstractDto {
 	
 	private String razaoSocial;
 	private EnderecoDto endereco;
@@ -25,4 +25,5 @@ public class EmpresaDto implements Dto {
 	private String responsavelTelefone;
 	@ApiModelProperty(example = "99999999999999")
 	private String cnpj;
+	
 }

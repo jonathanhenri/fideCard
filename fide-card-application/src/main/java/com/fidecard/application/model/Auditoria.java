@@ -25,4 +25,10 @@ public class Auditoria extends AbstractBaseEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", nullable = false)
 	protected Long id;
+	
+	@Column(name = "table_name", nullable = false)
+	private String tableName;
+	
+	@Column(name = "json_texto")
+	private String jsonTexto;
 }

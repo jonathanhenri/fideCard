@@ -1,8 +1,10 @@
 package com.fidecard.application.model;
 
 import com.fidecard.application.enuns.StatusCartao;
+import com.fidecard.application.model.regraCartao.RegraCartao;
 import com.fidecard.application.model.support.AbstractBaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,19 +12,22 @@ import lombok.Setter;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -45,6 +50,7 @@ public class CartaoFidelidade extends AbstractBaseEntity {
 	private Cliente cliente;
 	
 	@NotNull
+	@Enumerated(EnumType.ORDINAL)
 	@Column(name = "status_cartao")
 	private StatusCartao statusCartao;
 	
@@ -52,5 +58,18 @@ public class CartaoFidelidade extends AbstractBaseEntity {
 	@OneToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "layout_cartao_id", foreignKey = @ForeignKey(name = "fk_cartao_layout_cartao"))
 	private LayoutCartao layoutCartao;
+	
+	@OneToMany(mappedBy = "cartao_fidelidade", cascade = CascadeType.ALL)
+	private List<RegraCartao> listaRegrasCartao;
+	
+	@Builder
+	public CartaoFidelidade(Long id, Empresa empresa, Cliente cliente, StatusCartao statusCartao,
+							LayoutCartao layoutCartao) {
+		this.id = id;
+		this.empresa = empresa;
+		this.cliente = cliente;
+		this.statusCartao = statusCartao;
+		this.layoutCartao = layoutCartao;
+	}
 	
 }

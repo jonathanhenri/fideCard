@@ -38,6 +38,7 @@ public class UsuarioListener {
 					message.getStringProperty(PropriedadesJmsCadastro.JSON_MODEL.name());
 			
 			Usuario usuario = UsuarioConvertUtil.convertUsuarioDtoToUsuario(jsonModel);
+			
 			usuario.setStatusUsuario(StatusUsuario.ATIVO);
 			
 			usuarioService.validarCreate(usuario);

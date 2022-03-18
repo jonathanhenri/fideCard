@@ -14,6 +14,9 @@ public class Filas {
 	public static final String USUARIO_ATUALIZAR = "fide_card_atualizar_usuario";
 	public static final String USUARIO_DELETAR = "fide_card_deletar_usuario";
 	
+	public static final String CARTAO_FIDELIDADE_CADASTRO = "fide_card_cadastro_cartao_fidelidade";
+	public static final String CARTAO_FIDELIDADE_DELETAR = "fide_card_deletar_cartao_fidelidade";
+	
 	private Filas() {
 		super();
 	}

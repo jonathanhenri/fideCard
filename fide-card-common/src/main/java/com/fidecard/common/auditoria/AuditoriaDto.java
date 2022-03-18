@@ -1,22 +1,27 @@
-package com.fidecard.common.usuario;
+package com.fidecard.common.auditoria;
 
 import com.fidecard.common.AbstractDto;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(description = "Usuário")
-public class UsuarioDto extends AbstractDto {
+@ApiModel(description = "Auditoria")
+public class AuditoriaDto extends AbstractDto {
 	
-	private String hashLogin;
-	private String hashSenha;
+	@ApiModelProperty(name = "Nome da tabela")
+	private String tableName;
+	
+	@ApiModelProperty(name = "Json da auditoria")
+	private String jsonTexto;
 	
 }

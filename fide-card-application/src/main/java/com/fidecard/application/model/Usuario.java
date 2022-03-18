@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -38,9 +40,11 @@ public class Usuario extends AbstractBaseEntity {
 	private String hashSenha;
 	
 	@Column(name = "tipo_usuario")
+	@Enumerated(EnumType.ORDINAL)
 	private TipoUsuario tipoUsuario;
 	
 	@Column(name = "status_usuario")
+	@Enumerated(EnumType.ORDINAL)
 	private StatusUsuario statusUsuario;
 	
 	@Builder

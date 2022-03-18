@@ -1,6 +1,6 @@
 package com.fidecard.common.cartaoFidelidade;
 
-import com.fidecard.common.Dto;
+import com.fidecard.common.AbstractDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(description = "Cartao Fidelidade")
-public class CartaoFidelidadeDto implements Dto  {
+public class CartaoFidelidadeDto extends AbstractDto {
 	
 	@ApiModelProperty(name = "Empresa")
 	private Long empresaId;
@@ -24,11 +24,12 @@ public class CartaoFidelidadeDto implements Dto  {
 	@ApiModelProperty(name = "Cliente")
 	private Long clienteId;
 	
-	@ApiModelProperty(name = "Layout Cartao")
-	private Long layoutCartaoId;
-	
 	private Integer statusCartao;
 	
 	@ApiModelProperty(name = "Regra do Cartão")
 	private List<RegraCartaoDto> listRegrasCartaoDto;
+	
+	@ApiModelProperty(name = "Layout Cartao")
+	private LayoutCartaoDto layoutCartaoDto;
+	
 }

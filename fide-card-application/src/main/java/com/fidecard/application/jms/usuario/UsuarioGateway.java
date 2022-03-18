@@ -26,7 +26,7 @@ public class UsuarioGateway extends CadastroGateway {
 	
 	public void cadastrar(UsuarioDto usuarioDto) {
 		try {
-			LOGGER.info("Enfileirando Cadastro Usuario {}", usuarioDto.getHashCpf());
+			LOGGER.info("Enfileirando Cadastro Usuario {}", usuarioDto.getHashLogin());
 			enfileirar(USUARIO_CADASTRO, toJson(usuarioDto));
 		} catch (IOException e) {
 			throw new ServiceException("Falha ao importar Usuario", e);
@@ -35,7 +35,7 @@ public class UsuarioGateway extends CadastroGateway {
 	
 	public void atualizar(UsuarioDto usuarioDto) {
 		try {
-			LOGGER.info("Enfileirando Atualizar Usuario {}", usuarioDto.getHashCpf());
+			LOGGER.info("Enfileirando Atualizar Usuario {}", usuarioDto.getHashLogin());
 			enfileirar(USUARIO_ATUALIZAR, toJson(usuarioDto));
 		} catch (IOException e) {
 			throw new ServiceException("Falha ao importar Usuario", e);
@@ -44,7 +44,7 @@ public class UsuarioGateway extends CadastroGateway {
 	
 	public void deletar(UsuarioDto usuarioDto) {
 		try {
-			LOGGER.info("Enfileirando Deletar Usuario {}", usuarioDto.getHashCpf());
+			LOGGER.info("Enfileirando Deletar Usuario {}", usuarioDto.getHashLogin());
 			enfileirar(USUARIO_DELETAR, toJson(usuarioDto));
 		} catch (IOException e) {
 			throw new ServiceException("Falha ao importar Usuario", e);
