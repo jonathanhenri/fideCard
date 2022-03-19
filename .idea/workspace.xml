@@ -5,39 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="CRUD">
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cartaoFidelidade/CartaoFidelidadeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/conversoes/AbstractConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/conversoes/cartaoFidelidade/CartaoFidelidadeConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/enuns/TipoNotificacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cartaoFidelidade/CartaoFidelidadeGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cartaoFidelidade/CartaoFidelidadeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cartaoFidelidade/CartaoFidelidadeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cartaoFidelidade/CartaoFidelidadeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cartaoFidelidade/CartaoFidelidadeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/layoutCartao/LayoutCartaoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/layoutCartao/LayoutCartaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/layoutCartao/LayoutCartaoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/AbstractDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/auditoria/AuditoriaDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cartaoFidelidade/LayoutCartaoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card.log.2022-03-17.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/Permissao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/UserAuthority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/api/ApiJwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/api/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/authentication/AuthenticationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/authentication/AuthenticationTypeConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/handles/AccessDeniedMessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/handles/DefaultAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/handles/DefaultAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/handles/ErroDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/iapi/IApiSecretKeyProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/jwt/AbstractJwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/jwt/JwtConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/jwt/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/mensagens/SegurancaMensagem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/secretkey/AbstractSecretKeyProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/secretkey/SecretKeyConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca/secretkey/SecretKeyFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/sessao/SessaoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/sessao/SessaoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/EncriptaDecriptaAES.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/seguranca/ApiUserAuthenticatedDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/seguranca/UserAuthenticatedDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/Filas.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/Filas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/usuario/UsuarioGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/usuario/UsuarioGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/usuario/UsuarioListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/usuario/UsuarioListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Auditoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Auditoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CartaoFidelidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/CartaoFidelidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/LayoutCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/LayoutCartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Notificacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Notificacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/conversoes/cartaoFidelidade/CartaoFidelidadeConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/conversoes/cartaoFidelidade/CartaoFidelidadeConvertUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cartaoFidelidade/CartaoFidelidadeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/jms/cartaoFidelidade/CartaoFidelidadeListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/regraCartao/RegraCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/regraCartao/RegraCartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cartaoFidelidade/CartaoFidelidadeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cartaoFidelidade/CartaoFidelidadeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/usuario/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cartaoFidelidade/RegraCartaoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cartaoFidelidade/RegraCartaoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cliente/ClienteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/cliente/ClienteDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/empresa/EmpresaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/empresa/EmpresaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/endereco/EnderecoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/endereco/EnderecoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/usuario/UsuarioDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/usuario/UsuarioDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card.log" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +102,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/fide-card-application/src/test/java/com/fidecard/application" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -105,21 +110,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\java\com\fidecard\application\seguranca" />
+      <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\java\com\fidecard\application" />
       <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\java\com\fidecard\application\config" />
       <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\resources" />
       <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\java\com\fidecard\application\utils" />
-      <recent name="E:\workspaceFideCard\fideCard\fide-card-application\src\main\java\com\fidecard\application\model\support" />
-      <recent name="E:\workspaceFideCard\fideCard\fide-card-common" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.fidecard.application.utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fidecard.common.seguranca" />
+      <recent name="com.fidecard.application.services.sessao" />
+      <recent name="com.fidecard.application.seguranca" />
+      <recent name="com.fidecard.application.utils" />
       <recent name="com.fidecard.application.services.layoutCartao" />
-      <recent name="com.fidecard.application.conversoes.cartaoFidelidade" />
-      <recent name="com.fidecard.application.services.cartaoFidelidade" />
-      <recent name="com.fidecard.application.jms.cartaoFidelidade" />
-      <recent name="com.fidecard.application.enuns" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -128,7 +133,20 @@
       <command value="mvn clean install -U" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EncriptaDecriptaAES">
+    <configuration name="EncriptaDecriptaAES" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fidecard.application.utils.EncriptaDecriptaAES" />
+      <module name="fide-card-application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fidecard.application.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,6 +166,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EncriptaDecriptaAES" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -164,7 +187,8 @@
       <workItem from="1647341845224" duration="34000" />
       <workItem from="1647390554344" duration="4802000" />
       <workItem from="1647559288502" duration="6006000" />
-      <workItem from="1647637917134" duration="5783000" />
+      <workItem from="1647637917134" duration="5812000" />
+      <workItem from="1647696684736" duration="6261000" />
     </task>
     <task id="LOCAL-00001" summary="Criando coisas">
       <created>1647201974092</created>
@@ -208,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647565662162</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CRUD">
+      <created>1647643965697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647643965697</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,9 +270,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/Utils.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/EncriptaDecriptaAES.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/utils/EncriptaDecriptaAES.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

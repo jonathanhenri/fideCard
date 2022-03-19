@@ -3,6 +3,7 @@ package com.fidecard.application.model;
 import com.fidecard.application.enuns.StatusUsuario;
 import com.fidecard.application.enuns.TipoUsuario;
 import com.fidecard.application.model.support.AbstractBaseEntity;
+import com.fidecard.application.utils.EncriptaDecriptaAES;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,11 +34,11 @@ public class Usuario extends AbstractBaseEntity {
 	
 	@Column(name = "login", nullable = false)
 	@NotNull
-	private String hashLogin;
+	private byte[] hashLogin;
 	
 	@Column(name = "hash_senha")
 	@NotNull
-	private String hashSenha;
+	private byte[] hashSenha;
 	
 	@Column(name = "tipo_usuario")
 	@Enumerated(EnumType.ORDINAL)
@@ -51,10 +52,21 @@ public class Usuario extends AbstractBaseEntity {
 	public Usuario(Long id, String hashLogin, String hashSenha, TipoUsuario tipoUsuario,
 				   StatusUsuario statusUsuario) {
 		this.id = id;
-		this.hashLogin = hashLogin;
-		this.hashSenha = hashSenha;
+		EncriptaDecriptaAES aes = new EncriptaDecriptaAES();
+		this.hashLogin = aes.encrypt(hashLogin);
+		this.hashSenha = aes.encrypt(hashSenha);
 		this.tipoUsuario = tipoUsuario;
 		this.statusUsuario = statusUsuario;
+	}
+	
+	public String getLoginDescriptografado() {
+		EncriptaDecriptaAES aes = new EncriptaDecriptaAES();
+		return aes.decrypt(getHashLogin());
+	}
+	
+	public String getSenhaDescriptografada() {
+		EncriptaDecriptaAES aes = new EncriptaDecriptaAES();
+		return aes.decrypt(getHashSenha());
 	}
 	
 }

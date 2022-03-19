@@ -18,6 +18,6 @@ public class RegraCartaoDto extends AbstractDto {
 	
 	private Integer tipoRegraCartao;
 	private Double valor;
-	private String localDateTime;
+	private String date;
 	
 }

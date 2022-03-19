@@ -8,16 +8,6 @@ import java.util.Locale;
 
 public class Utils {
 	
-	public static Date convertStringToData(String data) {
-		Date dataEntrada;
-		if (StringUtils.isEmpty(data)) {
-			dataEntrada = new Date();
-		} else {
-			dataEntrada = asDate(data);
-		}
-		return dataEntrada;
-	}
-	
 	public static Date parseDataWithNoTimezone(String data) {
 		return parseData(data, "yyyy-MM-dd HH:mm:ss");
 	}

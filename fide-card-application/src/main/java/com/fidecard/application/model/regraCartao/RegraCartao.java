@@ -3,7 +3,6 @@ package com.fidecard.application.model.regraCartao;
 import com.fidecard.application.enuns.TipoRegraCartao;
 import com.fidecard.application.model.CartaoFidelidade;
 import com.fidecard.application.model.support.AbstractBaseEntity;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -17,8 +16,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Positive;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Setter
 @Getter
@@ -38,7 +39,8 @@ public class RegraCartao extends AbstractBaseEntity {
 	private Double valor;
 	
 	@Column(name = "data")
-	private LocalDateTime data;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date data;
 	
 	@Column(name = "tipo_regra_cartao", nullable = false)
 	private TipoRegraCartao tipoRegraCartao;
@@ -49,7 +51,7 @@ public class RegraCartao extends AbstractBaseEntity {
 	
 	
 	@Builder
-	public RegraCartao(Long id, Double valor, LocalDateTime data, TipoRegraCartao tipoRegraCartao,
+	public RegraCartao(Long id, Double valor, Date data, TipoRegraCartao tipoRegraCartao,
 					   CartaoFidelidade cartaoFidelidade) {
 		this.id = id;
 		this.valor = valor;
