@@ -49,7 +49,6 @@ public class RegraCartao extends AbstractBaseEntity {
 	@JoinColumn(name = "cartao_fidelidade_id")
 	private CartaoFidelidade cartaoFidelidade;
 	
-	
 	@Builder
 	public RegraCartao(Long id, Double valor, Date data, TipoRegraCartao tipoRegraCartao,
 					   CartaoFidelidade cartaoFidelidade) {

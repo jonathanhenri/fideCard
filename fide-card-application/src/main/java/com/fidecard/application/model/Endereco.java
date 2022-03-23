@@ -66,7 +66,7 @@ public class Endereco extends AbstractBaseEntity {
 	private String pais;
 	
 	@Column(name = "telefone")
-	private String telefone;
+	private byte[] telefone;
 	
 	@Builder
 	public Endereco(Long id, String logradouro, String numero, String complemento, String bairro,
@@ -83,7 +83,10 @@ public class Endereco extends AbstractBaseEntity {
 		this.cep = cep;
 		this.codigoPais = codigoPais;
 		this.pais = pais;
-		this.telefone = telefone;
+		this.telefone = encrypt(telefone);
 	}
 	
+	public String getTelefoneDecrypted() {
+		return decrypt(getTelefone());
+	}
 }

@@ -18,8 +18,7 @@ import lombok.Setter;
 @ApiModel(description = "Cliente")
 public class ClienteDto extends AbstractDto {
 	
-	private String hashCpf;
-	private String hashSenha;
+	private String cpf;
 	private String nome;
 	
 	@ApiModelProperty(example = "1995-03-26T12:25:59-03:00")

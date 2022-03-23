@@ -1,7 +1,6 @@
 package com.fidecard.application;
 
 import com.fidecard.application.config.ConfigPackage;
-import com.fidecard.application.model.Usuario;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

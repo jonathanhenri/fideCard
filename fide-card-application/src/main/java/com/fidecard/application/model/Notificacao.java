@@ -2,6 +2,7 @@ package com.fidecard.application.model;
 
 import com.fidecard.application.enuns.TipoNotificacao;
 import com.fidecard.application.model.support.AbstractBaseEntity;
+import com.fidecard.application.model.usuario.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

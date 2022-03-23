@@ -1,6 +1,6 @@
 package com.fidecard.application.services.usuario;
 
-import com.fidecard.application.model.Usuario;
+import com.fidecard.application.model.usuario.Usuario;
 import com.fidecard.application.services.AbstractService;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +20,8 @@ public class UsuarioServiceImpl extends AbstractService<Usuario, UsuarioReposito
 	}
 	
 	@Override
-	public Usuario findByLogin(String login) {
-		return usuarioRepository.findByLogin(login);
+	public Usuario findByHashLogin(byte[] hashLogin) {
+		return usuarioRepository.findByHashLogin(hashLogin);
 	}
 	
 }

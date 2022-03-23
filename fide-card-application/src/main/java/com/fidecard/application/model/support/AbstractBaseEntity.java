@@ -2,7 +2,8 @@ package com.fidecard.application.model.support;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.fidecard.application.model.Usuario;
+import com.fidecard.application.model.usuario.Usuario;
+import com.fidecard.application.utils.EncriptaDecriptaAES;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -16,7 +17,6 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 import javax.persistence.Version;
-import javax.validation.constraints.NotNull;
 
 @Setter
 @Getter
@@ -65,6 +65,16 @@ public abstract class AbstractBaseEntity implements Entityable {
 	@Override
 	public boolean isNew() {
 		return getId() == null;
+	}
+	
+	protected String decrypt(byte[] textoEncriptado) {
+		EncriptaDecriptaAES aes = EncriptaDecriptaAES.getInstance();
+		return aes.decrypt(textoEncriptado);
+	}
+	
+	protected byte[] encrypt(String textoPuro) {
+		EncriptaDecriptaAES aes = EncriptaDecriptaAES.getInstance();
+		return aes.encrypt(textoPuro);
 	}
 	
 }

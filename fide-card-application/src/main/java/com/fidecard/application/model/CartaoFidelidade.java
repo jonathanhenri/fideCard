@@ -9,6 +9,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -58,9 +59,6 @@ public class CartaoFidelidade extends AbstractBaseEntity {
 	@OneToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "layout_cartao_id", foreignKey = @ForeignKey(name = "fk_cartao_layout_cartao"))
 	private LayoutCartao layoutCartao;
-	
-	@OneToMany(mappedBy = "cartao_fidelidade", cascade = CascadeType.ALL)
-	private List<RegraCartao> listaRegrasCartao;
 	
 	@Builder
 	public CartaoFidelidade(Long id, Empresa empresa, Cliente cliente, StatusCartao statusCartao,

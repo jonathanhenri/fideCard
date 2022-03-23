@@ -1,6 +1,6 @@
 package com.fidecard.application.seguranca.jwt;
 
-import br.com.oobj.canhoto.digital.config.security.authentication.AuthenticationType;
+import com.fidecard.application.seguranca.authentication.AuthenticationType;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.DefaultSecurityFilterChain;

@@ -9,6 +9,7 @@ import com.fidecard.application.model.regraCartao.RegraCartao;
 import com.fidecard.application.services.cliente.ClienteService;
 import com.fidecard.application.services.empresa.EmpresaService;
 import com.fidecard.application.services.layoutCartao.LayoutCartaoService;
+import com.fidecard.application.utils.DateUtils;
 import com.fidecard.application.utils.Utils;
 import com.fidecard.common.cartaoFidelidade.CartaoFidelidadeDto;
 import com.google.gson.Gson;
@@ -44,18 +45,18 @@ public class CartaoFidelidadeConvertUtil extends AbstractConvertUtil {
 	}
 	
 	private void setRegrasCartao(CartaoFidelidadeDto cartaoFidelidadeDto, CartaoFidelidade cartaoFidelidade) {
-		if(!CollectionUtils.isEmpty(cartaoFidelidadeDto.getListRegrasCartaoDto())) {
-			cartaoFidelidade.setListaRegrasCartao(new ArrayList<>());
-			
-			cartaoFidelidadeDto.getListRegrasCartaoDto().forEach(regraDto -> {
-				
-				RegraCartao regraCartao = RegraCartao.builder().tipoRegraCartao(
-						TipoRegraCartao.fromValue(regraDto.getTipoRegraCartao())).valor(regraDto.getValor()).data(
-						Utils.convertStringToData(regraDto.getDate())).cartaoFidelidade(cartaoFidelidade).build();
-						
-				cartaoFidelidade.getListaRegrasCartao().add(regraCartao);
-			});
-		}
+//		if(!CollectionUtils.isEmpty(cartaoFidelidadeDto.getListRegrasCartaoDto())) {
+//			cartaoFidelidade.setListaRegrasCartao(new ArrayList<>());
+//
+//			cartaoFidelidadeDto.getListRegrasCartaoDto().forEach(regraDto -> {
+//
+//				RegraCartao regraCartao = RegraCartao.builder().tipoRegraCartao(
+//						TipoRegraCartao.fromValue(regraDto.getTipoRegraCartao())).valor(regraDto.getValor()).data(
+//						DateUtils.convertStringToData(regraDto.getDate())).cartaoFidelidade(cartaoFidelidade).build();
+//
+//				cartaoFidelidade.getListaRegrasCartao().add(regraCartao);
+//			});
+//		}
 	}
 	
 	private void setLayoutCartao(CartaoFidelidadeDto cartaoFidelidadeDto, CartaoFidelidade cartaoFidelidade) {

@@ -39,11 +39,7 @@ public class Cliente extends AbstractBaseEntity {
 	
 	@Column(name = "hash_cpf", nullable = false)
 	@NotBlank(message = "Hash senha é obrigatório")
-	private String hashCpf;
-	
-	@NotBlank(message = "Hash senha é obrigatório")
-	@Column(name = "hash_senha", nullable = false)
-	private String hashSenha;
+	private byte[] hashCpf;
 	
 	@NotBlank(message = "Nome é obrigatório")
 	@Column(name = "nome", nullable = false)
@@ -62,11 +58,10 @@ public class Cliente extends AbstractBaseEntity {
 	private Endereco endereco;
 	
 	@Builder
-	public Cliente(Long id, String hashCpf, String hashSenha, String nome, Date dataNascimento, Date dataUltimoAcesso,
+	public Cliente(Long id, String hashCpf, String nome, Date dataNascimento, Date dataUltimoAcesso,
 				   Endereco endereco) {
 		this.id = id;
-		this.hashCpf = hashCpf;
-		this.hashSenha = hashSenha;
+		this.hashCpf = encrypt(hashCpf);
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.dataUltimoAcesso = dataUltimoAcesso;

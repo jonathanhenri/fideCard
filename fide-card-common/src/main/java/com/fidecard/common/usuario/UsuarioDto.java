@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -18,8 +19,11 @@ import java.util.Optional;
 @ApiModel(description = "Usuário")
 public class UsuarioDto extends AbstractDto {
 	
-	private String hashLogin;
-	private String hashSenha;
+	@NotEmpty
+	private String login;
+	
+	@NotEmpty
+	private String senha;
 	
 	private List<String> permissoes;
 	
@@ -28,9 +32,10 @@ public class UsuarioDto extends AbstractDto {
 	}
 	
 	@Builder
-	public UsuarioDto(String hashLogin, String hashSenha, List<String> permissoes) {
-		this.hashLogin = hashLogin;
-		this.hashSenha = hashSenha;
+	public UsuarioDto(Long id, String login, String senha, List<String> permissoes) {
+		super(id);
+		this.login = login;
+		this.senha = senha;
 		this.permissoes = permissoes;
 	}
 	

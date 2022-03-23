@@ -1,4 +1,4 @@
-package com.fidecard.application.seguranca.handles;
+package com.fidecard.application;
 
 import org.springframework.http.HttpStatus;
 

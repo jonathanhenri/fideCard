@@ -3,12 +3,10 @@ package com.fidecard.application.jms.usuario;
 import static com.fidecard.application.jms.Filas.EMPRESA_CADASTRO;
 import static com.fidecard.application.jms.Filas.USUARIO_CADASTRO;
 
-import com.fidecard.application.conversoes.EmpresaConvertUtil;
 import com.fidecard.application.conversoes.UsuarioConvertUtil;
 import com.fidecard.application.enuns.StatusUsuario;
 import com.fidecard.application.jms.PropriedadesJmsCadastro;
-import com.fidecard.application.model.Empresa;
-import com.fidecard.application.model.Usuario;
+import com.fidecard.application.model.usuario.Usuario;
 import com.fidecard.application.services.usuario.UsuarioService;
 import com.fidecard.application.utils.exceptions.ServiceException;
 import org.slf4j.Logger;

@@ -17,7 +17,7 @@ public class ApiUserAuthenticatedDto extends UserAuthenticatedDto {
     private UsuarioDto usuario;
 
     public ApiUserAuthenticatedDto(UsuarioDto usuario) {
-        super(usuario.getHashLogin(), usuario.getPermissoes());
+        super(usuario.getLogin(), usuario.getPermissoes());
         this.usuario = usuario;
     }
 

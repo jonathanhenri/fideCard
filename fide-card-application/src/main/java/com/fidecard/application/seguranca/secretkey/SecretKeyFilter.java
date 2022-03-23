@@ -34,17 +34,13 @@ public class SecretKeyFilter extends GenericFilterBean {
             throws IOException, ServletException {
         try {
             HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-            String secretKey = resolveToken(httpServletRequest);
-            Optional.ofNullable(this.secretKeyProvider.getAuthentication(secretKey))
-                    .ifPresent(authentication -> SecurityContextHolder.getContext().setAuthentication(authentication));
-            filterChain.doFilter(servletRequest, servletResponse);
+//            String secretKey = resolveToken(httpServletRequest);
+//            Optional.ofNullable(this.secretKeyProvider.getAuthentication(secretKey))
+//                    .ifPresent(authentication -> SecurityContextHolder.getContext().setAuthentication(authentication));
+//            filterChain.doFilter(servletRequest, servletResponse);
         } catch (ExpiredJwtException eje) {
             ((HttpServletResponse) servletResponse).setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         }
     }
 
-    private String resolveToken(HttpServletRequest request) {
-        String secretKey = request.getHeader(SecretKeyConfigurer.X_INTEGRATION_AUTH_TOKEN_HEADER);
-        return StringUtils.hasText(secretKey) ? secretKey : EMPTY;
-    }
 }

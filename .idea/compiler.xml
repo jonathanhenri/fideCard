@@ -8,19 +8,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fide-card-common" />
+        <module name="fide-card-cache" />
         <module name="fide-card-application" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fide-card-application" target="8" />
+      <module name="fide-card-cache" target="8" />
       <module name="fide-card-common" target="8" />
       <module name="fide.card" target="8" />
+      <module name="oobj-cache" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fide-card-application" options="-parameters" />
+      <module name="fide-card-cache" options="-parameters" />
       <module name="fide-card-common" options="-parameters" />
+      <module name="oobj-cache" options="-parameters" />
     </option>
   </component>
 </project>

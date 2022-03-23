@@ -2,6 +2,7 @@ package com.fidecard.application.seguranca.jwt;
 
 import com.fidecard.application.seguranca.UserAuthority;
 import com.fidecard.application.utils.DateUtils;
+import com.fidecard.common.seguranca.UserAuthenticatedDto;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
