@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/fide-card-application/fide-card-application.iml" filepath="$PROJECT_DIR$/fide-card-application/fide-card-application.iml" />
       <module fileurl="file://$PROJECT_DIR$/fide-card-cache/fide-card-cache.iml" filepath="$PROJECT_DIR$/fide-card-cache/fide-card-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/fide-card-common/fide-card-common.iml" filepath="$PROJECT_DIR$/fide-card-common/fide-card-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fide-card-i18n/fide-card-i18n.iml" filepath="$PROJECT_DIR$/fide-card-i18n/fide-card-i18n.iml" />
       <module fileurl="file://$PROJECT_DIR$/fide.card.iml" filepath="$PROJECT_DIR$/fide.card.iml" />
     </modules>
   </component>

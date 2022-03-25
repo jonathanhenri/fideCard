@@ -14,19 +14,16 @@ import java.util.stream.Collectors;
 public class UsuarioDtoFactory {
 
     public static UsuarioDto build(Usuario usuario) {
-//        return UsuarioDto.builder()
-//                .hashLogin(usuario.getHashLogin())
-//                .hashSenha(usuario.getHashSenha())
-//                .id(usuario.getId())
-//                .permissoes(usuario.getPermissoes().stream().map(Permissao::name).collect(Collectors.toList()))
-//                .build();
-        return null;
+        return UsuarioDto.builder()
+                .login(usuario.getLoginDescriptografado())
+                .id(usuario.getId())
+                .permissoes(usuario.getPermissoes().stream().map(Permissao::name).collect(Collectors.toList()))
+                .build();
     }
     
     public static UsuarioDto buildDecrypt(Usuario usuario) {
         return UsuarioDto.builder()
                 .login(usuario.getLoginDescriptografado())
-                .senha(usuario.getSenhaDescriptografada())
                 .id(usuario.getId())
                 .permissoes(usuario.getPermissoes().stream().map(Permissao::name).collect(Collectors.toList()))
                 .build();

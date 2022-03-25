@@ -20,8 +20,8 @@ public class ApiJwtProvider extends AbstractJwtProvider {
     }
 
     @Override
-    protected ApiUserAuthenticatedDto getUserDetailsByUsername(String cpf) {
-        return Optional.ofNullable(this.sessaoService.getUsuarioApiCache(cpf))
+    protected ApiUserAuthenticatedDto getUserDetailsByUsername(String login) {
+        return Optional.ofNullable(this.sessaoService.getUsuarioApiCache(login))
                 .orElseThrow(() -> new IllegalStateException("Usuário não existe"));
     }
 }

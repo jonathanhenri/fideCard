@@ -19,6 +19,8 @@
 	<modules>
 		<module>fide-card-application</module>
 		<module>fide-card-common</module>
+		<module>fide-card-cache</module>
+		<module>fide-card-i18n</module>
 	</modules>
 
 	<properties>

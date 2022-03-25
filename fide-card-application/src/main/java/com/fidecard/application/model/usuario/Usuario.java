@@ -4,7 +4,6 @@ import com.fidecard.application.enuns.StatusUsuario;
 import com.fidecard.application.enuns.TipoUsuario;
 import com.fidecard.application.model.support.AbstractBaseEntity;
 import com.fidecard.application.seguranca.Permissao;
-import com.fidecard.application.utils.EncriptaDecriptaAES;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -22,6 +21,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Setter
@@ -31,7 +32,6 @@ import java.util.Set;
 @Entity
 @Table(name = "usuario")
 public class Usuario extends AbstractBaseEntity {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", nullable = false)
@@ -75,6 +75,14 @@ public class Usuario extends AbstractBaseEntity {
 
 	public String getSenhaDescriptografada() {
 		return decrypt(getHashSenha());
+	}
+	
+	public boolean conferirSenha(String senha) {
+		return senha.equals(getSenhaDescriptografada());
+	}
+	
+	public Set<Permissao> getPermissoes() {
+		return Optional.ofNullable(permissoes).orElseGet(HashSet::new);
 	}
 	
 }

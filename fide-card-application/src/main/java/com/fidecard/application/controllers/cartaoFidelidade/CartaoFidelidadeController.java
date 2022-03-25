@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class CartaoFidelidadeController {
 	
 	private final CartaoFidelidadeGateway cartaoFidelidadeGateway;
-	private static final String BASE_URL = "/cartao_fidelidade";
-	public static final String URL_CADASTRAR = BASE_URL + "/iapi/cadastrar";
-	public static final String URL_DELETAR = BASE_URL + "/iapi/deletar";
+	private static final String BASE_URL = "/api/cartao_fidelidade";
+	public static final String URL_CADASTRAR = BASE_URL + "/api/cadastrar";
+	public static final String URL_DELETAR = BASE_URL + "/api/deletar";
 	
 	@Autowired
 	public CartaoFidelidadeController(CartaoFidelidadeGateway cartaoFidelidadeGateway) {

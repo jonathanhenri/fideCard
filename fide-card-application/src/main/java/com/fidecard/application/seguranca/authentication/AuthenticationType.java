@@ -7,8 +7,7 @@ import lombok.Getter;
 /**
  * Centralizador de configurações de autenticação
  * <p>
- * API - Usuário Motorista
- * IAPI - Sistema autenticado (Oobj Monitor)
+ * API - Usuário
  *
  */
 @Getter

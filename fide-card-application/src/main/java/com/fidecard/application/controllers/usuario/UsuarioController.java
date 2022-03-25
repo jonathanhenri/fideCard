@@ -2,6 +2,7 @@ package com.fidecard.application.controllers.usuario;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+import com.fidecard.application.controllers.AbstractController;
 import com.fidecard.application.jms.usuario.UsuarioGateway;
 import com.fidecard.application.model.usuario.UsuarioDtoFactory;
 import com.fidecard.application.seguranca.authentication.AuthenticationTypeConstant;
@@ -25,18 +26,18 @@ import javax.validation.Valid;
 
 @Api(tags = "Usuario")
 @RestController
-public class UsuarioController {
+public class UsuarioController extends AbstractController {
 	
 	private final UsuarioGateway usuarioGateway;
 	private final UsuarioService usuarioService;
-	private static final String BASE_URL = "/usuario";
-	public static final String URL_CADASTRAR = BASE_URL + "/cadastrar";
+	private static final String BASE_URL = "/api/usuario";
+	public static final String URL_CADASTRAR = "/usuario/cadastrar";
 	public static final String URL_ATUALIZAR = BASE_URL + "/api/atualizar";
-	public static final String URL_DELETAR = BASE_URL + "/api/deletar";
+	public static final String URL_DELETAR = BASE_URL + "/deletar";
 	
 	//TODO REMOVER ISSO DEPOIS
-	public static final String URL_CONSULTAR_ID = BASE_URL + "/api/consultar-id/{id}";
-	public static final String URL_CONSULTAR_LOGIN = BASE_URL + "/api/consultar-login/{login}";
+	public static final String URL_CONSULTAR_ID = BASE_URL + "/consultar-id/{id}";
+	public static final String URL_CONSULTAR_LOGIN = BASE_URL + "/consultar-login/{login}";
 	
 	@Autowired
 	public UsuarioController(UsuarioGateway usuarioGateway, UsuarioService usuarioService) {

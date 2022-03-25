@@ -122,6 +122,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.fidecard</groupId>
+			<artifactId>fide-card-i18n</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fidecard</groupId>
 			<artifactId>fide-card-cache</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>

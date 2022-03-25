@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fide-card-i18n" />
         <module name="fide-card-common" />
-        <module name="fide-card-cache" />
         <module name="fide-card-application" />
+        <module name="fide-card-cache" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fide-card-application" target="8" />
       <module name="fide-card-cache" target="8" />
       <module name="fide-card-common" target="8" />
+      <module name="fide-card-i18n" target="8" />
       <module name="fide.card" target="8" />
       <module name="oobj-cache" target="8" />
     </bytecodeTargetLevel>
@@ -25,6 +27,7 @@
       <module name="fide-card-application" options="-parameters" />
       <module name="fide-card-cache" options="-parameters" />
       <module name="fide-card-common" options="-parameters" />
+      <module name="fide-card-i18n" options="-parameters" />
       <module name="oobj-cache" options="-parameters" />
     </option>
   </component>
