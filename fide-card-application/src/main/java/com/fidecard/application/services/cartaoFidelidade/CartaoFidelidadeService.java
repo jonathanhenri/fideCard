@@ -5,5 +5,4 @@ import com.fidecard.application.services.Service;
 
 public interface CartaoFidelidadeService extends Service<CartaoFidelidade> {
 
-
 }

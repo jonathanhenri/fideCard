@@ -14,6 +14,7 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = false)
 public class AbstractDto implements Dto {
 	
+	// Para models que precise buscar algo no banco
 	@ApiModelProperty(name = "ID Caso exista")
 	private Long id;
 	

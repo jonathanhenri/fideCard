@@ -2,6 +2,7 @@ package com.fidecard.application.controllers.empresa;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+import com.fidecard.application.controllers.AbstractController;
 import com.fidecard.application.jms.empresa.EmpresaGateway;
 import com.fidecard.application.utils.exceptions.ServiceException;
 import com.fidecard.common.empresa.EmpresaDto;
@@ -17,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Api(tags = "Empresa")
 @RestController
-public class EmpresaController {
+public class EmpresaController extends AbstractController {
 	
 	private final EmpresaGateway empresaGateway;
-	private static final String BASE_URL = "/empresa";
-	public static final String URL_CADASTRAR = BASE_URL + "/iapi/cadastrar";
-	public static final String URL_ATUALIZAR = BASE_URL + "/iapi/atualizar";
-	public static final String URL_DELETAR = BASE_URL + "/iapi/deletar";
+	private static final String BASE_URL_EMPRESA = BASE_URL_API + "/empresa";
+	public static final String URL_CADASTRAR = BASE_URL_EMPRESA + "/cadastrar";
+	public static final String URL_ATUALIZAR = BASE_URL_EMPRESA + "/atualizar";
+	public static final String URL_DELETAR = BASE_URL_EMPRESA + "/deletar";
 	
 	@Autowired
 	public EmpresaController(EmpresaGateway empresaGateway) {

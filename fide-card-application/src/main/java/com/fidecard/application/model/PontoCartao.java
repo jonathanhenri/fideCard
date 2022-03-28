@@ -1,7 +1,7 @@
 package com.fidecard.application.model;
 
 import com.fidecard.application.model.support.AbstractBaseEntity;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +25,6 @@ import java.util.Date;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
@@ -53,5 +52,15 @@ public class PontoCartao extends AbstractBaseEntity {
 	@JoinColumn(name = "cartao_fidelidade_id", foreignKey = @ForeignKey(name = "fk_ponto_cartao"))
 	private CartaoFidelidade cartaoFidelidade;
 	
+	
+	@Builder
+	public PontoCartao(Long id, Double valor, String identificadorUnico, Date dataPontuacao,
+					   CartaoFidelidade cartaoFidelidade) {
+		this.id = id;
+		this.valor = valor;
+		this.identificadorUnico = identificadorUnico;
+		this.dataPontuacao = dataPontuacao;
+		this.cartaoFidelidade = cartaoFidelidade;
+	}
 	
 }

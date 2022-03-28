@@ -30,14 +30,16 @@ public class UsuarioController extends AbstractController {
 	
 	private final UsuarioGateway usuarioGateway;
 	private final UsuarioService usuarioService;
-	private static final String BASE_URL = "/api/usuario";
-	public static final String URL_CADASTRAR = "/usuario/cadastrar";
-	public static final String URL_ATUALIZAR = BASE_URL + "/api/atualizar";
-	public static final String URL_DELETAR = BASE_URL + "/deletar";
+	
+	public static final String BASE_URL_USUARIO = BASE_URL_API + "/usuario";
+	
+	public static final String URL_CADASTRAR = BASE_URL_USUARIO + "/cadastrar";
+	public static final String URL_ATUALIZAR = BASE_URL_USUARIO + "/atualizar";
+	public static final String URL_DELETAR = BASE_URL_USUARIO + "/deletar";
 	
 	//TODO REMOVER ISSO DEPOIS
-	public static final String URL_CONSULTAR_ID = BASE_URL + "/consultar-id/{id}";
-	public static final String URL_CONSULTAR_LOGIN = BASE_URL + "/consultar-login/{login}";
+	public static final String URL_CONSULTAR_ID = BASE_URL_USUARIO + "/consultar-id/{id}";
+	public static final String URL_CONSULTAR_LOGIN = BASE_URL_USUARIO + "/consultar-login/{login}";
 	
 	@Autowired
 	public UsuarioController(UsuarioGateway usuarioGateway, UsuarioService usuarioService) {
