@@ -14,7 +14,7 @@ import java.util.Locale;
 @Configuration
 @ComponentScan(
 		basePackages = {"com.fidecard"},
-		excludeFilters = {@ComponentScan.Filter(type = FilterType.REGEX, pattern = {"br.com.oobj.cache.*"})}
+		excludeFilters = {@ComponentScan.Filter(type = FilterType.REGEX, pattern = {"br.com.cache.*"})}
 )
 @EnableOpenApi
 public class GeneralConfig {

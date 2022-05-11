@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="Auth">
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/pontoCartao/PontoCartaoFidelidadeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/conversoes/PontoCartaoFidelidadeConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/pontoCartao/PontoCartaoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/pontoCartao/PontoCartaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/pontoCartao/PontoCartaoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/pontoCartao/PontoCartaoFidelidadeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fide-card.log.2022-03-24.0.gz" afterDir="false" />
+    <list default="true" id="5523be2b-75fc-49bd-85be-74dd2d129fc2" name="Changes" comment="Pontos cartão">
+      <change afterPath="$PROJECT_DIR$/fide-card.log.0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/autenticacao/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/autenticacao/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cartaoFidelidade/CartaoFidelidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cartaoFidelidade/CartaoFidelidadeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cliente/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/cliente/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/empresa/EmpresaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/empresa/EmpresaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/usuario/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/controllers/usuario/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/PontoCartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/model/PontoCartao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cartaoFidelidade/CartaoFidelidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/services/cartaoFidelidade/CartaoFidelidadeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/AbstractDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-common/src/main/java/com/fidecard/common/AbstractDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card.log" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fide-card.log.2022-03-17.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/GeneralConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/config/GeneralConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-cache/target/classes/br/com/oobj/cache/CacheHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-cache/target/classes/br/com/oobj/cache/local/LocalCacheHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-cache/target/classes/br/com/oobj/cache/redis/RedisCacheHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fide-card-cache/target/classes/br/com/oobj/cache/redis/RedisConfig.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +74,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/fide-card-application/src/test/java/com/fidecard/application" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fide-card-application/src/main/java/com/fidecard/application/seguranca" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workspaceTeste/tibox/entregar/api" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -179,7 +167,9 @@
       <workItem from="1647987527230" duration="4179000" />
       <workItem from="1647991828031" duration="3530000" />
       <workItem from="1648159201842" duration="8234000" />
-      <workItem from="1648503896965" duration="3198000" />
+      <workItem from="1648503896965" duration="3957000" />
+      <workItem from="1648551369871" duration="62000" />
+      <workItem from="1652213910259" duration="4411000" />
     </task>
     <task id="LOCAL-00001" summary="Criando coisas">
       <created>1647201974092</created>
@@ -251,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648169473865</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Pontos cartão">
+      <created>1648507152034</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648507152034</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +274,8 @@
     <MESSAGE value="Filas e JPA" />
     <MESSAGE value="CRUD" />
     <MESSAGE value="Auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auth" />
+    <MESSAGE value="Pontos cartão" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pontos cartão" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
