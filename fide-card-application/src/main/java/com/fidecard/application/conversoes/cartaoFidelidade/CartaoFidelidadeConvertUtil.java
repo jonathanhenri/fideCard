@@ -1,22 +1,16 @@
 package com.fidecard.application.conversoes.cartaoFidelidade;
 
 import com.fidecard.application.conversoes.AbstractConvertUtil;
+import com.fidecard.application.conversoes.EmpresaConvertUtil;
 import com.fidecard.application.enuns.StatusCartao;
-import com.fidecard.application.enuns.TipoRegraCartao;
 import com.fidecard.application.model.CartaoFidelidade;
 import com.fidecard.application.model.LayoutCartao;
-import com.fidecard.application.model.regraCartao.RegraCartao;
 import com.fidecard.application.services.cliente.ClienteService;
 import com.fidecard.application.services.empresa.EmpresaService;
 import com.fidecard.application.services.layoutCartao.LayoutCartaoService;
-import com.fidecard.application.utils.DateUtils;
-import com.fidecard.application.utils.Utils;
 import com.fidecard.common.cartaoFidelidade.CartaoFidelidadeDto;
-import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
-import java.util.ArrayList;
 
 @Component
 public class CartaoFidelidadeConvertUtil extends AbstractConvertUtil {
@@ -28,14 +22,12 @@ public class CartaoFidelidadeConvertUtil extends AbstractConvertUtil {
 		super(clienteService, empresaService, layoutCartaoService);
 	}
 	
-	public CartaoFidelidade convertCartaoDtoToCartao(String jsonCartaoFidelidade) {
-		CartaoFidelidadeDto cartaoFidelidadeDto = new Gson().fromJson(jsonCartaoFidelidade,
-				CartaoFidelidadeDto.class);
+	public CartaoFidelidade convertCartaoDtoToCartao(CartaoFidelidadeDto cartaoFidelidadeDto) {
 		
 		CartaoFidelidade cartaoFidelidade = CartaoFidelidade.builder()
 				.statusCartao(StatusCartao.fromValue(cartaoFidelidadeDto.getStatusCartao()))
-				.cliente(clienteService.findById(cartaoFidelidadeDto.getClienteId()))
-				.empresa(empresaService.findById(cartaoFidelidadeDto.getEmpresaId())).build();
+				.cliente(clienteService.findById(cartaoFidelidadeDto.getCliente().getId()))
+				.empresa(empresaService.findById(cartaoFidelidadeDto.getEmpresa().getId())).build();
 		
 		setLayoutCartao(cartaoFidelidadeDto, cartaoFidelidade);
 		
@@ -67,6 +59,15 @@ public class CartaoFidelidadeConvertUtil extends AbstractConvertUtil {
 		} else {
 			cartaoFidelidade.setLayoutCartao(LayoutCartao.builder().codigoCor(cartaoFidelidadeDto.getLayoutCartaoDto().getCodigoCor()).build());
 		}
+	}
+	
+	
+	public CartaoFidelidadeDto convertEntityToDto(CartaoFidelidade cartaoFidelidade) {
+		
+		CartaoFidelidadeDto cartaoFidelidadeDto = new CartaoFidelidadeDto();
+		cartaoFidelidadeDto.setEmpresa(EmpresaConvertUtil.convertEmpresaToDto(cartaoFidelidade.getEmpresa()));
+		
+		return cartaoFidelidadeDto;
 	}
 	
 }

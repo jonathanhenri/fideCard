@@ -1,5 +1,7 @@
 package com.fidecard.application.services;
 
+import java.util.List;
+
 public interface Service<E> {
 	
 	E create(E bean);
@@ -11,6 +13,8 @@ public interface Service<E> {
 	void delete(Long id);
 	
 	E findById(Long id);
+	
+	List<E> findAll();
 	
 	boolean validarCreate(E bean);
 	

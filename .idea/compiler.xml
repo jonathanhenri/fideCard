@@ -14,11 +14,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="fide-card-application" target="8" />
-      <module name="fide-card-cache" target="8" />
-      <module name="fide-card-common" target="8" />
-      <module name="fide-card-i18n" target="8" />
-      <module name="fide.card" target="8" />
+      <module name="fide-card-application" target="1.8" />
+      <module name="fide-card-cache" target="1.8" />
+      <module name="fide-card-common" target="1.8" />
+      <module name="fide-card-i18n" target="1.8" />
+      <module name="fide.card" target="1.8" />
       <module name="oobj-cache" target="8" />
     </bytecodeTargetLevel>
   </component>

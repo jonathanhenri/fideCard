@@ -5,6 +5,7 @@ import com.fidecard.application.seguranca.Permissao;
 import com.fidecard.application.services.AbstractService;
 import org.springframework.stereotype.Service;
 import java.util.Collections;
+import java.util.List;
 
 @Service
 public class UsuarioServiceImpl extends AbstractService<Usuario, UsuarioRepository> implements UsuarioService {
@@ -25,6 +26,11 @@ public class UsuarioServiceImpl extends AbstractService<Usuario, UsuarioReposito
 	public Usuario create(Usuario usuario) {
 		usuario.setPermissoes(Collections.singleton(Permissao.USUARIO));
 		return super.create(usuario);
+	}
+	
+	@Override
+	public List<Usuario> findAll() {
+		return (List<Usuario>) getRepository().findAll();
 	}
 	
 	@Override

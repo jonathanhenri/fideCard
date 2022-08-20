@@ -7,8 +7,7 @@ import com.google.gson.Gson;
 public class UsuarioConvertUtil {
 	
 	
-	public static Usuario convertUsuarioDtoToUsuario(String jsonUsuario) {
-		UsuarioDto usuarioDto = new Gson().fromJson(jsonUsuario, UsuarioDto.class);
+	public static Usuario convertUsuarioDtoToUsuario(UsuarioDto usuarioDto) {
 		
 		Usuario usuario = Usuario.builder().hashLogin(usuarioDto.getLogin()).hashSenha(usuarioDto.getSenha()).build();
 		

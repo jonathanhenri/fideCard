@@ -7,9 +7,7 @@ import com.google.gson.Gson;
 public class EmpresaConvertUtil {
 	
 	
-	public static Empresa convertEmpresaDtoToEmpresa(String jsonEmpresaDto) {
-		EmpresaDto empresaDto = new Gson().fromJson(jsonEmpresaDto, EmpresaDto.class);
-		
+	public static Empresa convertEmpresaDtoToEmpresa(EmpresaDto empresaDto) {
 		Empresa empresa = Empresa.builder().razaoSocial(empresaDto.getRazaoSocial())
 				.responsavelNome(empresaDto.getResponsavelNome())
 				.responsavelTelefone(empresaDto.getResponsavelTelefone()).cnpj(empresaDto.getCnpj())
@@ -17,5 +15,11 @@ public class EmpresaConvertUtil {
 		
 		return empresa;
 	}
+	
+	public static EmpresaDto convertEmpresaToDto(Empresa empresa) {
+		return EmpresaDto.builder().razaoSocial(empresa.getRazaoSocial()).cnpj(empresa.getCnpj())
+				.urlLogo(empresa.getUrlLogo()).build();
+	}
+	
 	
 }

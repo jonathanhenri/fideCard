@@ -5,17 +5,17 @@ import static com.fidecard.application.jms.Filas.USUARIO_CADASTRO;
 
 import com.fidecard.application.conversoes.UsuarioConvertUtil;
 import com.fidecard.application.enuns.StatusUsuario;
-import com.fidecard.application.jms.PropriedadesJmsCadastro;
 import com.fidecard.application.model.usuario.Usuario;
 import com.fidecard.application.services.usuario.UsuarioService;
 import com.fidecard.application.utils.exceptions.ServiceException;
+import com.fidecard.common.usuario.UsuarioDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 import javax.jms.JMSException;
-import javax.jms.TextMessage;
+import javax.jms.ObjectMessage;
 
 @Service
 public class UsuarioListener {
@@ -30,12 +30,10 @@ public class UsuarioListener {
 	}
 	
 	@JmsListener(destination = USUARIO_CADASTRO)
-	public void onMessage(TextMessage message) {
+	public void onMessage(ObjectMessage message) {
 		try {
-			String jsonModel =
-					message.getStringProperty(PropriedadesJmsCadastro.JSON_MODEL.name());
-			
-			Usuario usuario = UsuarioConvertUtil.convertUsuarioDtoToUsuario(jsonModel);
+			UsuarioDto usuarioDto = (UsuarioDto) message.getObject();
+			Usuario usuario = UsuarioConvertUtil.convertUsuarioDtoToUsuario(usuarioDto);
 			
 			usuario.setStatusUsuario(StatusUsuario.ATIVO);
 			

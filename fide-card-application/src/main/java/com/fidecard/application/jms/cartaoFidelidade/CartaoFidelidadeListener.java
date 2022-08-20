@@ -3,17 +3,17 @@ package com.fidecard.application.jms.cartaoFidelidade;
 import static com.fidecard.application.jms.Filas.CARTAO_FIDELIDADE_CADASTRO;
 
 import com.fidecard.application.conversoes.cartaoFidelidade.CartaoFidelidadeConvertUtil;
-import com.fidecard.application.jms.PropriedadesJmsCadastro;
 import com.fidecard.application.model.CartaoFidelidade;
 import com.fidecard.application.services.cartaoFidelidade.CartaoFidelidadeService;
 import com.fidecard.application.utils.exceptions.ServiceException;
+import com.fidecard.common.cartaoFidelidade.CartaoFidelidadeDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 import javax.jms.JMSException;
-import javax.jms.TextMessage;
+import javax.jms.ObjectMessage;
 
 @Service
 public class CartaoFidelidadeListener {
@@ -31,11 +31,11 @@ public class CartaoFidelidadeListener {
 	}
 	
 	@JmsListener(destination = CARTAO_FIDELIDADE_CADASTRO)
-	public void onMessage(TextMessage message) {
+	public void onMessage(ObjectMessage message) {
 		try {
-			String jsonModel = message.getStringProperty(PropriedadesJmsCadastro.JSON_MODEL.name());
+			CartaoFidelidadeDto cartaoFidelidadeDto = (CartaoFidelidadeDto) message.getObject();
 			
-			CartaoFidelidade cartaoFidelidade = cartaoFidelidadeConvertUtil.convertCartaoDtoToCartao(jsonModel);
+			CartaoFidelidade cartaoFidelidade = cartaoFidelidadeConvertUtil.convertCartaoDtoToCartao(cartaoFidelidadeDto);
 			
 			cartaoFidelidadeService.validarCreate(cartaoFidelidade);
 			cartaoFidelidadeService.create(cartaoFidelidade);

@@ -1,22 +1,19 @@
 package com.fidecard.application.jms.empresa;
 
-import static com.fidecard.application.jms.Filas.CLIENTE_CADASTRO;
 import static com.fidecard.application.jms.Filas.EMPRESA_CADASTRO;
 
-import com.fidecard.application.conversoes.ClienteConvertUtil;
 import com.fidecard.application.conversoes.EmpresaConvertUtil;
-import com.fidecard.application.jms.PropriedadesJmsCadastro;
-import com.fidecard.application.model.Cliente;
 import com.fidecard.application.model.Empresa;
 import com.fidecard.application.services.empresa.EmpresaService;
 import com.fidecard.application.utils.exceptions.ServiceException;
+import com.fidecard.common.empresa.EmpresaDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 import javax.jms.JMSException;
-import javax.jms.TextMessage;
+import javax.jms.ObjectMessage;
 
 @Service
 public class EmpresaListener {
@@ -31,12 +28,10 @@ public class EmpresaListener {
 	}
 	
 	@JmsListener(destination = EMPRESA_CADASTRO)
-	public void onMessage(TextMessage message) {
+	public void onMessage(ObjectMessage message) {
 		try {
-			String jsonModel =
-					message.getStringProperty(PropriedadesJmsCadastro.JSON_MODEL.name());
-			
-			Empresa empresa = EmpresaConvertUtil.convertEmpresaDtoToEmpresa(jsonModel);
+			EmpresaDto empresaDto = (EmpresaDto) message.getObject();
+			Empresa empresa = EmpresaConvertUtil.convertEmpresaDtoToEmpresa(empresaDto);
 			
 			empresaService.validarCreate(empresa);
 			empresaService.create(empresa);

@@ -54,6 +54,9 @@ public class Empresa extends AbstractBaseEntity {
 	@Size(min = 14, max = 20)
 	private String cnpj;
 	
+	@Column(name = "url_logo")
+	private String urlLogo;
+	
 	@Builder
 	public Empresa(Long id, String razaoSocial, Endereco endereco, String responsavelNome, String responsavelTelefone,
 				   String cnpj) {
